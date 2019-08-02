@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": false,
+		"allowSyntheticDefaultImports": true,
+		"removeComments": true,
+		"allowUmdGlobalAccess": true,
+		"outDir": "../public/app",
+		"typeRoots": [
+			"../typings/globals/",
+			"../typings/modules/"
+		]
+	},
+	"include": [
+		"app/**/*"
+	],
+	"exclude": [
+		"typings",
+		"node_modules",
+		"bower_components",
+		"public",
+		"src"
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "test-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp browserSync"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-rename": "*",
+    "gulp-typescript": "*",
+    "gulp-watch": "*",
+    "lodash": "*",
+    "react": "^16.1.0",
+    "react-dom": "*",
+    "typescript": "*",
+    "gulp-react-templates": "*"
+  },
+  "devDependencies": {
+    "koa": "*",
+    "koa-static": "*"
+  }
+}

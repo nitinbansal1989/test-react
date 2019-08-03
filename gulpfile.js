@@ -9,8 +9,8 @@ var rename = require("gulp-rename");
 
 // Copy vendor libraries from /node_modules into /libs
 gulp.task('copy', function () {
-	return gulp.src(['node_modules/react/umd/react.development.js', 
-		'node_modules/react-dom/umd/react-dom.development.js', 
+	return gulp.src(['node_modules/react/umd/react.development.js',
+		'node_modules/react-dom/umd/react-dom.development.js',
 		'node_modules/lodash/lodash.min.js'])
 		.pipe(gulp.dest('public/libs'));
 
@@ -43,7 +43,7 @@ gulp.task('appTsc', function () {
 // Configure the browserSync task
 gulp.task('browserSync', function () {
 
-	exec('node index.js', function (err, stdout, stderr) {
+	exec('node ./index.js', function (err, stdout, stderr) {
 		console.log(stdout);
 		console.log(stderr);
 		cb(err);

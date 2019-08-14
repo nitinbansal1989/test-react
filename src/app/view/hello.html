@@ -1,9 +1,25 @@
 <div>
-	<h2>Hello world, it is working?</h2>
-	<div>{this.state.header}</div>
-	<input type="text" model="header" onChange="{this.handleChange.bind(this)}" />
-	<input type="number" model="header" onChange="{this.handleChange.bind(this)}" />
-	<input type="checkbox" model="header" onChange="{this.handleChange.bind(this)}" />
-	<input type="date" model="header" onChange="{this.handleChange.bind(this)}" />
-	<input type="time" model="header" onChange="{this.handleChange.bind(this)}" />
+	<h2>Hello world, how is it working?</h2>
+
+	<div>{this.state.header1.text.val}</div>
+	<div>{this.state.header4}</div>
+	<div>{this.viewBool(this.state.header2)}</div>
+	<div>{this.state.header3}</div>
+	<div>{this.state.header6}</div>
+	<div>{this.state.header5}</div>
+
+	<input type="text" name="header1.text.val" onChange="{this.handleChange.bind(this)}"
+		value="{this.state.header1.text.val}" />
+	<input type="number" name="header4" onChange="{this.handleChange.bind(this)}" value="{this.state.header4}" />
+	<input type="checkbox" name="header2" onChange="{this.handleChange.bind(this)}" checked="{this.state.header2}" />
+	<input type="date" name="header3" onChange="{this.handleChange.bind(this)}" value={this.state.header3} />
+	<input type="time" name="header6" onChange="{this.handleChange.bind(this)}" value={this.state.header6} />
+
+	<select onChange="{this.handleChange.bind(this)}" name="header5" value="{this.state.header5}">
+		<option value="">SELECT</option>
+		<option value="color">Color</option>
+		<option value="backgroundColor">Background color</option>
+		<option value="borderColor">Border color</option>
+	</select>
+
 </div>

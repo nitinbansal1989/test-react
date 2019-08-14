@@ -1,46 +1,30 @@
+import StateChangeMixin from '/js/state-change-mixin.js';
 import view from '/app/view/hello.js';
 
-export default class Hello extends React.Component {
+class Hello extends React.Component {
 
 	constructor() {
 		super();
-		this.state = {};
-		this.model = {};
+		this.state = {
+			header1: {
+				text: {
+					val: 'hi'
+				}
+			},
+			header2: true,
+			header3: '2019-08-02',
+			header6: '00:00:00',
+			header4: 5,
+			header5: 'borderColor'
+		};
 	}
 
 	render() {
 		return view.bind(this)();
 	}
 
-	handleChange(ev) {
-		let element = ev.target;
-		let path = element.attributes.model.value;
-		let type = element.type;
-
-		let val = null;
-		switch (type) {
-			case 'number':
-			case 'datetime':
-			case 'date':
-			case 'time': {
-				val = element.valueAsNumber;
-				break;
-			};
-			case 'checkbox': {
-				val = element.checked;
-				break;
-			};
-			default: {
-				val = element.value;
-			}
-		}
-
-		_.set(this.model, path, val);
-		this.setState(this.model);
-	}
-
-	getVal(object, path) {
-		return _.get(object, path);
-	}
-
 }
+
+Object.assign(Hello.prototype, StateChangeMixin);
+
+export default Hello;

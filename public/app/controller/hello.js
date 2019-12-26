@@ -1,5 +1,5 @@
-import StateChangeMixin from '/js/state-change-mixin.js';
-import view from '/app/view/hello.js';
+import StateChangeMixin from '../../js/state-change-mixin.js';
+import view from '../../app/view/hello.js';
 
 class Hello extends React.Component {
 
